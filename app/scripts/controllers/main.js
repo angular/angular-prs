@@ -39,8 +39,10 @@ angular.module('ngPullDashboardApp')
         Object.keys(dates).sort().forEach(function(date) {
           var dateInfo = dates[date];
           dateInfo.date = date;
-          dateInfo.openCount = previousDateInfo.openCount + (dateInfo.createdCount || 0) - (dateInfo.closedCount || 0);
-          timeSeries.push(dates[date]);
+          dateInfo.createdCount = dateInfo.createdCount || 0;
+          dateInfo.closedCount = dateInfo.closedCount || 0;
+          dateInfo.openCount = previousDateInfo.openCount + dateInfo.createdCount - dateInfo.closedCount;
+          timeSeries.push(dateInfo);
 
           previousDateInfo = dateInfo;
         });

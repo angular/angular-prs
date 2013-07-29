@@ -1,6 +1,8 @@
 <h1>AngularJS PR TimeSeries</h1>
 
-<time-series-graph time-series="timeSeries"></time-series-graph>
+<time-series-graph time-series="dayTimeSeries"></time-series-graph>
+<time-series-graph time-series="weekTimeSeries"></time-series-graph>
+
 
 <table class="table table-hover">
   <tr>
@@ -10,7 +12,7 @@
     <th>Open PRs</th>
   </tr>
 
-  <tr ng-repeat="date in timeSeries">
+  <tr ng-repeat="date in weekTimeSeries">
     <td>{{date.date | date:"yyyy-MM-dd"}}</td>
     <td>{{date.createdCount || 0}}</td>
     <td>{{date.closedCount || 0}}</td>

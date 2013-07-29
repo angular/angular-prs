@@ -98,7 +98,7 @@ angular.module('ngPullDashboardApp')
                  .attr("transform", function(d) { return "translate(" + x(d.value.date) + "," + y(d.value.count) + ")"; })
                  .attr("x", 3)
                  .attr("dy", ".35em")
-                 .text(function(d) { return d.name; });
+                 .text(function(d) { return d.name.replace('Count', ''); });
          });
        }
      };

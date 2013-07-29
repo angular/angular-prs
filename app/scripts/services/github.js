@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ngPullDashboardApp')
+angular.module('angularPrsApp')
   .service('github', function Github($http, $q) {
 
     this.openPrs = function() {

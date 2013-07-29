@@ -1,7 +1,7 @@
 'use strict';
 
 describe('Directive: timeSeriesGraph', function () {
-  beforeEach(module('ngPullDashboardApp'));
+  beforeEach(module('angularPrsApp'));
 
   var element;
 

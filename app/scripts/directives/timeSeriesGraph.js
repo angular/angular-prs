@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ngPullDashboardApp')
+angular.module('angularPrsApp')
   .directive('timeSeriesGraph', function () {
      return {
        restrict: 'E',

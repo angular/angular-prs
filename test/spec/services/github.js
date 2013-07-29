@@ -3,7 +3,7 @@
 describe('Service: github', function () {
 
   // load the service's module
-  beforeEach(module('ngPullDashboardApp'));
+  beforeEach(module('angularPrsApp'));
 
   // instantiate service
   var github;

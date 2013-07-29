@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ngPullDashboardApp')
+angular.module('angularPrsApp')
   .controller('MainCtrl', function ($scope, github, dateFilter) {
       var dates = {},
           dayTimeSeries = [],

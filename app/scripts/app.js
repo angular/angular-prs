@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ngPullDashboardApp', [])
+angular.module('angularPrsApp', [])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

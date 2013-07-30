@@ -3,8 +3,6 @@
 angular.module('angularPrsApp')
   .service('github', function Github($http, $q, $location) {
 
-    var urlPrefix = ($location.domain === 'angular.github.io') ? '/angular-prs' : ''
-
     this.openPrs = function() {
       return fetchPages('open', 2);
     };
@@ -33,7 +31,7 @@ angular.module('angularPrsApp')
       var prs = [];
 
       for (var i = 1; i <= lastPage; i++) {
-        responsePromises.push($http.get(urlPrefix + '/data/pulls-' + state + '/pulls-page-' + i + '.json'));
+        responsePromises.push($http.get('data/pulls-' + state + '/pulls-page-' + i + '.json'));
       }
 
       return $q.all(responsePromises).then(function (responses) {

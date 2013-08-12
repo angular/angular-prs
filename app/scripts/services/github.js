@@ -9,7 +9,7 @@ angular.module('angularPrsApp')
 
 
     this.closedPrs = function() {
-      return fetchPages('closed', 50);
+      return fetchPages('closed', 53);
     };
 
 

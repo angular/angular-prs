@@ -4,12 +4,12 @@ angular.module('angularPrsApp')
   .service('github', function Github($http, $q, $location) {
 
     this.openPrs = function() {
-      return fetchPages('open', 3);
+      return fetchPages('open', 7);
     };
 
 
     this.closedPrs = function() {
-      return fetchPages('closed', 54);
+      return fetchPages('closed', 75);
     };
 
 

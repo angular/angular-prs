@@ -13,11 +13,11 @@ grunt build
 
 git checkout gh-pages
 
-rm -r bower_components
-rm -r data
-rm -r scripts
-rm -r styles
-rm -r views
+rm -rf bower_components
+rm -rf data
+rm -rf scripts
+rm -rf styles
+rm -rf views
 
 cp -r $PROJECT_DIR/$BUILD_DIR/* $PROJECT_DIR/
 

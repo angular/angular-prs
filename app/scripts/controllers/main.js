@@ -95,6 +95,10 @@ angular.module('angularPrsApp')
         console.log('rendering...');
 
         $scope.dayTimeSeries = dayTimeSeries;
+        $scope.dailyStart = 0;
+        $scope.dailyEnd = 1000;
         $scope.weekTimeSeries = weekTimeSeries;
+        $scope.weeklyStart = 0;
+        $scope.weeklyEnd = 1000;
       });
   });

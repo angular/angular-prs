@@ -1,45 +1,13 @@
 <h1>AngularJS PR TimeSeries (weekly snapshots)</h1>
 
-<time-series-graph time-series="weekTimeSeries"></time-series-graph>
-
-
-<table class="table table-hover">
-  <tr>
-    <th>Date</th>
-    <th>New PRs</th>
-    <th>Closed PRs</th>
-    <th>Open PRs</th>
-  </tr>
-
-  <tr ng-repeat="date in weekTimeSeries | orderBy:'date':true">
-    <td>{{date.date | date:"yyyy-MM-dd"}}</td>
-    <td>{{date.createdCount || 0}}</td>
-    <td>{{date.closedCount || 0}}</td>
-    <td>{{date.pendingCount}}</td>
-  </tr>
-
-</table>
+<input type="range" ng-model="weeklyStart" min="0" max="1000">
+<input type="range" ng-model="weeklyEnd" min="0" max="1000">
+<time-series-graph time-series="weekTimeSeries" start="weeklyStart" end="weeklyEnd"></time-series-graph>
 
 
 <h1>AngularJS PR TimeSeries (daily snapshots)</h1>
 
-<time-series-graph time-series="dayTimeSeries"></time-series-graph>
-
-
-<table class="table table-hover">
-  <tr>
-    <th>Date</th>
-    <th>New PRs</th>
-    <th>Closed PRs</th>
-    <th>Open PRs</th>
-  </tr>
-
-  <tr ng-repeat="date in dayTimeSeries | orderBy:'date':true">
-    <td>{{date.date | date:"yyyy-MM-dd"}}</td>
-    <td>{{date.createdCount || 0}}</td>
-    <td>{{date.closedCount || 0}}</td>
-    <td>{{date.pendingCount}}</td>
-  </tr>
-
-</table>
+<input type="range" ng-model="dailyStart" min="0" max="1000">
+<input type="range" ng-model="dailyEnd" min="0" max="1000">
+<time-series-graph time-series="dayTimeSeries" start="dailyStart" end="dailyEnd"></time-series-graph>
 

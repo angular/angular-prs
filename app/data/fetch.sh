@@ -10,5 +10,5 @@ fi
 client_id=$1
 client_secret=$2
 
-for i in {1..14}; do curl -vo pulls-open/pulls-page-$i.json https://api.github.com/repositories/460078/pulls?state=open\&page=$i\&client_id=$client_id\&client_secret=$client_secret; done
-for i in {1..163}; do curl -vo pulls-closed/pulls-page-$i.json https://api.github.com/repositories/460078/pulls?state=closed\&page=$i\&client_id=$client_id\&client_secret=$client_secret; done
+for i in {1..16}; do curl -vo pulls-open/pulls-page-$i.json https://api.github.com/repositories/460078/pulls?state=open\&page=$i\&per_page=100\&client_id=$client_id\&client_secret=$client_secret; done
+for i in {1..200}; do curl -vo pulls-closed/pulls-page-$i.json https://api.github.com/repositories/460078/pulls?state=closed\&page=$i\&per_page=100\&client_id=$client_id\&client_secret=$client_secret; done
